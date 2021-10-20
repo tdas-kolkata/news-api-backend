@@ -4,9 +4,11 @@ const secret = "okdoaskdsoaodkaosk";
 function verifyJWT(req, res, next) {
   if (req.headers["x-access-token"]) {
     const token = req.headers["x-access-token"].split(" ")[1];
+    console.log(`token received - ${token}`);
     if (token) {
       jwt.verify(token, secret, (err, decoded) => {
         if (err) {
+          console.log(`Error in verifyJWT - ${err}`);
           return res.status(400).send({
             msg: "Failed to authenticate",
           });
