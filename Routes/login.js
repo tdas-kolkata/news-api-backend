@@ -1,7 +1,7 @@
 const loginRouter = require("express").Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const secret = "okdoaskdsoaodkaosk";
+const secret = process.env.JWT_SECRET;
 const User = require("../Models/User");
 
 loginRouter.post("/", async (req, res) => {
