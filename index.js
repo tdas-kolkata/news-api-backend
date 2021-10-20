@@ -2,6 +2,7 @@ const express = require("express");
 const config = require("config");
 require("dotenv").config();
 const mongoose = require("mongoose");
+const cors = require('cors');
 const mongo_uri = process.env.MONGO_URI;
 
 const app = express();
@@ -13,7 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/home", require("./Routes/user"));
 app.use("/test", require("./Routes/IsPrime"));
-app.use("/news",verifyJWT, require("./Routes/newsRouter"));
+app.use("/news",verifyJWT,cors(), require("./Routes/newsRouter"));
 app.use("/register", require("./Routes/register"));
 app.use("/login", require("./Routes/login"));
 
