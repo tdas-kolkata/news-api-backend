@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const secret = "okdoaskdsoaodkaosk";
+const secret = process.env.JWT_SECRET;
 
 function verifyJWT(req, res, next) {
   if (req.headers["x-access-token"]) {
@@ -20,10 +20,10 @@ function verifyJWT(req, res, next) {
         }
       });
     } else {
-      res.status(400).send("Mission Auth Header");
+      res.status(400).send("Missing Auth Header");
     }
   } else {
-    res.status(400).send("Mission Auth Header");
+    res.status(400).send("Missing Auth Header");
   }
 }
 
