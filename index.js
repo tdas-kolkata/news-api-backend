@@ -13,10 +13,10 @@ app.use(express.json({ extended: false }));
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/home", require("./Routes/user"));
-app.use("/test", require("./Routes/IsPrime"));
+app.use("/test", cors(),require("./Routes/IsPrime"));
 app.use("/news",verifyJWT,cors(), require("./Routes/newsRouter"));
-app.use("/register", require("./Routes/register"));
-app.use("/login", require("./Routes/login"));
+app.use("/register",cors(), require("./Routes/register"));
+app.use("/login",cors(), require("./Routes/login"));
 
 
 app.get("/", async (req, res) => {
