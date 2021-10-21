@@ -4,6 +4,9 @@ const jwt = require("jsonwebtoken");
 const secret = process.env.JWT_SECRET;
 const User = require("../Models/User");
 
+
+const cookiesOptions = { maxAge: 1000 * 60 * 60 * 12, HttpOnly: true,SameSite:'strict' };
+
 loginRouter.post("/", async (req, res) => {
   const loginUser = req.body.user;
   User.findOne({ username: loginUser.username })
@@ -22,7 +25,7 @@ loginRouter.post("/", async (req, res) => {
               jwt.sign(payload, secret, { expiresIn: 86400 }, (err, token) => {
                 if (err)
                   return res.json({ msg: "error in web token generation" });
-                return res.json({
+                return res.cookie('preference',{role:'student'},cookiesOptions).json({
                   msg: "Success",
                   token: "Bearer " + token,
                 });

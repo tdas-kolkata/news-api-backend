@@ -3,6 +3,7 @@ const config = require("config");
 require("dotenv").config();
 const mongoose = require("mongoose");
 const cors = require('cors');
+const helmet = require('helmet');
 const mongo_uri = process.env.MONGO_URI;
 
 const app = express();
@@ -11,6 +12,7 @@ const verifyJWT = require('./Middlewares/auth')
 
 app.use(express.json({ extended: false }));
 app.use(express.urlencoded({ extended: false }));
+app.use(helmet());
 
 app.use("/home", require("./Routes/user"));
 app.use("/test", cors(),require("./Routes/IsPrime"));

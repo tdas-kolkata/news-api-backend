@@ -5,7 +5,10 @@ const User = require("../Models/User");
 
 //@Route POST /register
 //@access public
+//@ cors *
 //@desc to register new users
+
+// const cookiesOptions = { maxAge: 1000 * 60 * 60 * 12, HttpOnly: true,SameSite:'strict' }
 
 router.post("/", async (req, res) => {
   try {
@@ -20,7 +23,7 @@ router.post("/", async (req, res) => {
     });
 
     if(existingUser){
-      res.status(404).json({msg:'Username or email has already been taken'});
+      res.status(403).json({msg:'Username or email or mobile no has already been taken'});
     }
     else{
       user.password =  await bcrypt.hash(user.password,10);
@@ -31,10 +34,12 @@ router.post("/", async (req, res) => {
         cellno:user.cellno
       });
       dbUser.save().then((data)=>{
-        res.send(data);
+        res
+        .cookie()
+        .json({username:data.username,email:data.email});
       })
       .catch(()=>{
-        res.status(400).json({msg:"Data is not saved"});
+        res.status(400).json({msg:"Data is not saved bad requst"});
       });
       
     }

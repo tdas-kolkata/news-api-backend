@@ -6,7 +6,7 @@ function verifyJWT(req, res, next) {
     const token = req.headers["x-access-token"].split(" ")[1];
     // console.log(`token received - ${token}`);
     if (token) {
-      jwt.verify(token, secret, (err, decoded) => {
+      jwt.verify(token, secret,{algorithms:['HS256']}, (err, decoded) => {
         if (err) {
           console.log(`Error in verifyJWT - ${err}`);
           return res.status(400).send({
