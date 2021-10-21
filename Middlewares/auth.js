@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 const secret = process.env.JWT_SECRET;
 
+
 function verifyJWT(req, res, next) {
   if (req.headers["x-access-token"]) {
     const token = req.headers["x-access-token"].split(" ")[1];

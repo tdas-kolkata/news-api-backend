@@ -2,6 +2,7 @@ const loginRouter = require("express").Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const secret = process.env.JWT_SECRET;
+const refreshSecret = process.env.JWT_REFRESH_SECRET;
 const User = require("../Models/User");
 
 
@@ -22,14 +23,9 @@ loginRouter.post("/", async (req, res) => {
                 id: dbUser._id,
                 username: dbUser.username,
               };
-              jwt.sign(payload, secret, { expiresIn: 86400 }, (err, token) => {
-                if (err)
-                  return res.json({ msg: "error in web token generation" });
-                return res.cookie('preference',{role:'student'},cookiesOptions).json({
-                  msg: "Success",
-                  token: "Bearer " + token,
-                });
-              });
+              const token = jwt.sign(payload,secret, { algorithm: 'HS256',expiresIn: '1d' });
+              const refresh_token = jwt.sign(payload,refreshSecret, { algorithm: 'HS256',expiresIn: '30d' });
+              res.json({token,refresh_token});
             } else {
               sendInvalid(res);
             }
