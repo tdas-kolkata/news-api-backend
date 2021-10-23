@@ -6,11 +6,10 @@ const News = require("../Models/News");
 //desc get all newes
 
 router.get("/all", async (req, res) => {
-  try{
+  try {
     let news = await News.find({});
-  res.send(news);
-  }
-  catch(err){
+    res.json({ status: "ok", totalResults: news.length, articles: news });
+  } catch (err) {
     res.send(err);
   }
 });

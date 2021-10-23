@@ -16,7 +16,7 @@ app.use(helmet());
 
 app.use("/home", require("./Routes/user"));
 app.use("/test", cors(),require("./Routes/IsPrime"));
-app.use("/news",verifyJWT,cors(), require("./Routes/newsRouter"));
+app.use("/news",cors(), require("./Routes/newsRouter"));  //verifyJWT
 app.use("/register",cors(), require("./Routes/register"));
 app.use("/login",cors(), require("./Routes/login"));
 
