@@ -2,4 +2,5 @@
 .env
 .log
 /config
-
+mainArticle.json
+otherArticle.json

@@ -12,6 +12,9 @@ const NewsSchema = new mongoose.Schema({
 	topic: {
 		type: String
 	},
+	page:{
+		type:String
+	},
 	section: {
 		type: String
 	},
