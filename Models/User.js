@@ -19,6 +19,9 @@ const userSchema = mongoose.Schema({
       type:String,
       required:true,
       unique:true
+  },
+  refreshToken:{
+    type:String
   }
 },{timestamp:true});
 

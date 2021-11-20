@@ -3,6 +3,7 @@ const config = require("config");
 require("dotenv").config();
 const mongoose = require("mongoose");
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
 const mongo_uri = process.env.MONGO_URI;
 
@@ -12,14 +13,15 @@ const verifyJWT = require('./Middlewares/auth')
 
 app.use(express.json({ extended: false }));
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 app.use(helmet());
 
 app.use("/home", require("./Routes/user"));
 app.use("/test", cors(),require("./Routes/IsPrime"));
-app.use("/news",cors(), require("./Routes/newsRouter"));  //verifyJWT
+app.use("/news",cors(),verifyJWT, require("./Routes/newsRouter"));  //verifyJWT
 app.use("/register",cors(), require("./Routes/register"));
 app.use("/login",cors(), require("./Routes/login"));
-
+app.use("/refresh_token",cors(), require("./Routes/refreshToken"));
 
 app.get("/", async (req, res) => {
   res.send("Home");

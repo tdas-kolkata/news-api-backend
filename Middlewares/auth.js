@@ -10,8 +10,8 @@ function verifyJWT(req, res, next) {
       jwt.verify(token, secret,{algorithms:['HS256']}, (err, decoded) => {
         if (err) {
           console.log(`Error in verifyJWT - ${err}`);
-          return res.status(400).send({
-            msg: "Failed to authenticate",
+          return res.status(401).send({
+            msg: `${err}`,
           });
         } else {
           req.user = {};
@@ -21,7 +21,7 @@ function verifyJWT(req, res, next) {
         }
       });
     } else {
-      res.status(400).send("Missing Auth Header");
+      res.status(400).send("No Token received");
     }
   } else {
     res.status(400).send("Missing Auth Header");
