@@ -27,7 +27,7 @@ loginRouter.post("/", async (req, res) => {
                 id: dbUser._id,
                 username: dbUser.username,
               };
-              const token = jwt.sign(payload,secret, { algorithm: 'HS256',expiresIn: '1d' });  //token is generated
+              const token = jwt.sign(payload,secret, { algorithm: 'HS256',expiresIn: '1m' });  //token is generated
               const refresh_token = jwt.sign(payload,refreshSecret, { algorithm: 'HS256',expiresIn: '30d' });  //refresh token is generated
               dbUser.refreshToken = refresh_token;        // refresh token is saved to the particular user
               dbUser.save().then(user=>{
