@@ -7,7 +7,7 @@ const News = require("../Models/News");
 
 router.get("/all", async (req, res) => {
   try {
-    let news = await News.find({});
+    let news = await News.find({}).sort({ page : 1});
     res.json({ status: "ok", totalResults: news.length, articles: news });
   } catch (err) {
     res.send(err);
