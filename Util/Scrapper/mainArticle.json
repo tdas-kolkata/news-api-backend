@@ -1,1 +1,74 @@
-[{"source":{"id":null,"name":"The Hindu"},"topic":"national","section":"Main Articles","subtopic":"","title":"Warlike situation prevails near LAC: Ladakh councillor","publishedAt":"Updated: November 19, 2021 07:25 IST","description":null,"url":"https://www.thehindu.com/news/national/warlike-situation-prevails-in-area-along-border-in-ladakh-councillor/article37564711.ece","urlToImage":"","page":2},{"source":{"id":null,"name":"The Hindu"},"topic":"national","section":"Main Articles","subtopic":"","title":"India, China agree to restart talks between border commanders","publishedAt":"Updated: November 19, 2021 08:29 IST","description":null,"url":"https://www.thehindu.com/news/national/india-china-agree-to-hold-14th-round-of-lac-talks/article37564334.ece","urlToImage":"","page":2},{"source":{"id":null,"name":"The Hindu"},"topic":"national","section":"Main Articles","subtopic":"","title":"Planetary crisis is a kind of bio-political war, akin to those of the past: Amitav Ghosh","publishedAt":"Updated: November 18, 2021 23:22 IST","description":null,"url":"https://www.thehindu.com/news/national/amitav-ghosh-interview-planetary-crisis-is-a-kind-of-bio-political-war-akin-to-those-of-the-past/article37561647.ece","urlToImage":"","page":2},{"source":{"id":null,"name":"The Hindu"},"topic":"national","section":"Main Articles","subtopic":"","title":"Wankhede’s school-leaving certificate submitted before court: Malik","publishedAt":"Updated: November 18, 2021 19:06 IST","description":null,"url":"https://www.thehindu.com/news/national/wankhedes-school-leaving-certificate-submitted-before-court-malik/article37561326.ece","urlToImage":"","page":2},{"source":{"id":null,"name":"The Hindu"},"topic":"national","section":"Main Articles","subtopic":"","title":"India must ramp up manufacturing of key ingredients for vaccines: PM Modi","publishedAt":"Updated: November 19, 2021 00:52 IST","description":null,"url":"https://www.thehindu.com/news/national/india-exported-over-65-million-doses-of-covid-19-vaccines-to-nearly-100-countries-this-year-pm-modi/article37560335.ece","urlToImage":"","page":2},{"source":{"id":null,"name":"The Hindu"},"topic":"national","section":"Main Articles","subtopic":"","title":"Over 115 crore vaccine doses administered in India till now, says Health Ministry","publishedAt":"Updated: November 18, 2021 18:05 IST","description":null,"url":"https://www.thehindu.com/news/national/over-115-crore-vaccine-doses-administered-in-india-till-now-says-health-ministry/article37560215.ece","urlToImage":"","page":2}]
+[
+  {
+    "source": { "id": null, "name": "The Hindu" },
+    "topic": "national",
+    "section": "Main Articles",
+    "subtopic": "",
+    "title": "People willing to travel further away, plan longer holidays",
+    "publishedAt": "Updated: November 20, 2021 22:14 IST",
+    "description": null,
+    "url": "https://www.thehindu.com/news/national/people-willing-to-travel-further-away-plan-longer-holidays/article37597371.ece",
+    "urlToImage": "",
+    "page": 2
+  },
+  {
+    "source": { "id": null, "name": "The Hindu" },
+    "topic": "national",
+    "section": "Main Articles",
+    "subtopic": "",
+    "title": "Joint bank account not mandatory for spouse pension: Government",
+    "publishedAt": "Updated: November 20, 2021 20:20 IST",
+    "description": null,
+    "url": "https://www.thehindu.com/news/national/joint-bank-account-not-mandatory-for-spouse-pension-government/article37597131.ece",
+    "urlToImage": "",
+    "page": 2
+  },
+  {
+    "source": { "id": null, "name": "The Hindu" },
+    "topic": "national",
+    "section": "Main Articles",
+    "subtopic": "",
+    "title": "Samyukt Kisan Morcha to go ahead with march to Parliament",
+    "publishedAt": "Updated: November 20, 2021 21:38 IST",
+    "description": null,
+    "url": "https://www.thehindu.com/news/national/samyukt-kisan-morcha-to-go-ahead-with-march-to-parliament/article37596438.ece",
+    "urlToImage": "",
+    "page": 2
+  },
+  {
+    "source": { "id": null, "name": "The Hindu" },
+    "topic": "national",
+    "section": "Main Articles",
+    "subtopic": "",
+    "title": "Navjot Singh Sidhu bats for trade, 'new friendship chapter' between India & Pakistan as he visits Kartarpur",
+    "publishedAt": "Updated: November 20, 2021 18:24 IST",
+    "description": null,
+    "url": "https://www.thehindu.com/news/national/navjot-singh-sidhu-bats-for-trade-new-friendship-chapter-between-india-pakistan-as-he-visits-kartarpur/article37595475.ece",
+    "urlToImage": "",
+    "page": 2
+  },
+  {
+    "source": { "id": null, "name": "The Hindu" },
+    "topic": "national",
+    "section": "Main Articles",
+    "subtopic": "",
+    "title": "What’s black in farm laws except for its ink, asks V.K. Singh",
+    "publishedAt": "Updated: November 20, 2021 18:05 IST",
+    "description": null,
+    "url": "https://www.thehindu.com/news/national/whats-black-in-farm-laws-except-for-its-ink-asks-vk-singh/article37595380.ece",
+    "urlToImage": "",
+    "page": 2
+  },
+  {
+    "source": { "id": null, "name": "The Hindu" },
+    "topic": "national",
+    "section": "Main Articles",
+    "subtopic": "",
+    "title": "Narendra Giri death: CBI charges Anand Giri, 2 others with criminal conspiracy, abetment to suicide",
+    "publishedAt": "Updated: November 20, 2021 18:01 IST",
+    "description": null,
+    "url": "https://www.thehindu.com/news/national/narendra-giri-death-cbi-charges-anand-giri-2-others-with-criminal-conspiracy-abetment-to-suicide/article37595321.ece",
+    "urlToImage": "",
+    "page": 2
+  }
+]

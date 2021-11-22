@@ -11,6 +11,8 @@ const app = express();
 
 const verifyJWT = require('./Middlewares/auth')
 
+app.use('/',express.static('build'));
+
 app.use(express.json({ extended: false }));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
