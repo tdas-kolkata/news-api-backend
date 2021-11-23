@@ -19,7 +19,8 @@
     "express": "^4.17.1",
     "helmet": "^4.6.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.0.10"
+    "mongoose": "^6.0.10",
+    "twilio": "^3.71.2"
   },
   "devDependencies": {},
   "keywords": [],

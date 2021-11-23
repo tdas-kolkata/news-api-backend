@@ -2,6 +2,7 @@ const router = require("express").Router();
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const User = require("../Models/User");
+const {sendWelcome} = require('../Util/sms/sendSms');
 
 //@Route POST /register
 //@access public
@@ -34,6 +35,7 @@ router.post("/", async (req, res) => {
         cellno:user.cellno
       });
       dbUser.save().then((data)=>{
+        sendWelcome(data.cellno);
         res
         .cookie()
         .json({username:data.username,email:data.email});
