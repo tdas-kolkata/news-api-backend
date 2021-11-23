@@ -18,7 +18,7 @@ const body ={
 };
 
 function sendWelcome(num) {
-  body.message = 'Welcome to News Sonar';
+  body.message = 'Welcome to News Sonar app. Enjoy your news headlines from different reliable sources without annoying ads.\n --Team News Sonar';
   body.numbers = num;
   axios.post(url,body,{headers:header}).then(res=>console.log('Msg sent'))
   .catch(err=>console.log(err));
