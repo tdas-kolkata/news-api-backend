@@ -1,6 +1,6 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
-// require("dotenv").config();
+require("dotenv").config();
 const fs = require("fs");
 const mongoose = require("mongoose");
 const News = require("../../Models/News");
