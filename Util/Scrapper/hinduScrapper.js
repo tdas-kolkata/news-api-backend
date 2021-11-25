@@ -128,7 +128,8 @@ async function getNationalData(url, page) {
   }
 }
 
-mongoose
+function hinduLoader(){
+  mongoose
   .connect(connURL)
   .then(() => {
     console.log("connected to mongo db");
@@ -149,3 +150,7 @@ mongoose
     console.log(err);
     mongoose.disconnect();
   });
+};
+
+module.exports = hinduLoader;
+
