@@ -1,7 +1,8 @@
 var cron = require('node-cron');
 var hinduLoader = require('./Util/Scrapper/hinduScrapper');
 
-var task = cron.schedule('*/1 * * * *', () =>  {
+// setting the job to run every 10 min to pull data
+var task = cron.schedule('*/10 * * * *', () =>  {
   hinduLoader();
 });
 
