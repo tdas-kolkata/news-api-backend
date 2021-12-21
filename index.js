@@ -11,7 +11,7 @@ const app = express();
 
 const verifyJWT = require('./Middlewares/auth')
 
-app.use('/',express.static('build'));
+app.use('/', express.static('build'));
 
 app.use(express.json({ extended: false }));
 app.use(express.urlencoded({ extended: false }));
@@ -19,11 +19,12 @@ app.use(cookieParser());
 app.use(helmet());
 
 app.use("/home", require("./Routes/user"));
-app.use("/test", cors(),require("./Routes/IsPrime"));
-app.use("/news",cors(),verifyJWT, require("./Routes/newsRouter"));  //verifyJWT
-app.use("/register",cors(), require("./Routes/register"));
-app.use("/login",cors(), require("./Routes/login"));
-app.use("/refresh_token",cors(), require("./Routes/refreshToken"));
+app.use("/test", cors(), require("./Routes/IsPrime"));
+app.use("/test/news", cors(), require("./Routes/newsRouter"));
+app.use("/news", cors(), verifyJWT, require("./Routes/newsRouter")); //verifyJWT
+app.use("/register", cors(), require("./Routes/register"));
+app.use("/login", cors(), require("./Routes/login"));
+app.use("/refresh_token", cors(), require("./Routes/refreshToken"));
 
 app.get("/", async (req, res) => {
   res.send("Home");
