@@ -19,8 +19,8 @@ app.use(cookieParser());
 app.use(helmet());
 
 app.use("/home", require("./Routes/user"));
-app.use("/test", cors(), require("./Routes/IsPrime"));
 app.use("/test/news", cors(), require("./Routes/newsRouter"));
+app.use("/test", cors(), require("./Routes/IsPrime"));
 app.use("/news", cors(), verifyJWT, require("./Routes/newsRouter")); //verifyJWT
 app.use("/register", cors(), require("./Routes/register"));
 app.use("/login", cors(), require("./Routes/login"));
